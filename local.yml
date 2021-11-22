@@ -11,7 +11,7 @@
         - tmux
         - vim
         - zsh
-        - pygmentize
+          #        - pygmentize
         #this one is needed for dconf further down, must happen before wallpaper step
         - python3-psutil
 
