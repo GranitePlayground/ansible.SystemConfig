@@ -37,14 +37,14 @@
 
           #- name: copy .zshrc file
           #copy:
-          #src: files/zshrc
+          #src: files/dotConfig/zshrc
           #dest: /home/greent/.zshrc
           #owner: greent
           #group: greent
 
   - name: copy .vimrc
     copy:
-    src: files/vimrc
+    src: files/dotConfig/vimrc/
     dest: /home/greent/.vimrc
     owner: greent
     group: greent      
