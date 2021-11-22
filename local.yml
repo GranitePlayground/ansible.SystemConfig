@@ -35,12 +35,12 @@
 #      key: "/org/gnome/desktop/background/picture-uri"
 #      value: "'zoom'
 
-  - name: copy .zshrc file
-    copy:
-      src: files/zshrc
-      dest: /home/greent/.zshrc
-      owner: greent
-      group: greent
+          #- name: copy .zshrc file
+          #copy:
+          #src: files/zshrc
+          #dest: /home/greent/.zshrc
+          #owner: greent
+          #group: greent
 
   - name: copy .vimrc
     copy:
