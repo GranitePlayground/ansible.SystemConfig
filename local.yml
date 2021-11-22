@@ -41,4 +41,10 @@
       dest: /home/greent/.zshrc
       owner: greent
       group: greent
-      
+
+  - name: copy .vimrc
+    copy:
+    src: files/vimrc
+    dest: /home/greent/.vimrc
+    owner: greent
+    group: greent      
