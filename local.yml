@@ -11,4 +11,6 @@
         - tmux
         - vim
         - zsh
-        - zsh-syntax-highlighting
+        - pygmentize
+#        - zsh-syntax-highlighting
+        
