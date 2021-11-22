@@ -16,23 +16,23 @@
         - python3-psutil
 
 # Wall paper example from LearnLinuxTV
-  - name: copy wallpaper file
-    copy:
-      src: files/desktop_images/ansible_test_desktop.jpg
-      dest: /usr/share/backgrounds/ansible_test_desktop.jpg
-      owner: root
-      group: root
+#  - name: copy wallpaper file
+#    copy:
+#      src: files/desktop_images/ansible_test_desktop.jpg
+#      dest: /usr/share/backgrounds/ansible_test_desktop.jpg
+#      owner: root
+#      group: root
 
-  - name: set wallpaper
-    become_user: greent
-    dconf:
-      key: "/org/gnome/desktop/background/picture-uri"
-      value: "'file:///usr/share/backgrounds/ansible-wallpaper.png'"
+#  - name: set wallpaper
+#    become_user: greent
+#    dconf:
+#      key: "/org/gnome/desktop/background/picture-uri"
+#      value: "'file:///usr/share/backgrounds/ansible-wallpaper.png'"
 
-  - name: set wallpaper position
-    become_user: greent
-    dconf:
-      key: "/org/gnome/desktop/background/picture-uri"
-      value: "'zoom'
+#  - name: set wallpaper position
+#    become_user: greent
+#    dconf:
+#      key: "/org/gnome/desktop/background/picture-uri"
+#      value: "'zoom'
 
         
