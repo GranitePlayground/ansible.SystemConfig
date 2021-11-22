@@ -12,5 +12,23 @@
         - vim
         - zsh
         - pygmentize
-#        - zsh-syntax-highlighting
+
+# Wall paper example from LearnLinuxTV
+  - name: copy wallpaper file
+    copy:
+      src: files/desktop_images/ansible_test_desktop.jpg
+      dest: /usr/share/backgrounds/ansible_test_desktop.jpg
+      owner: root
+      group: root
+
+  - name: set wallpaper
+    dconf:
+      key: "/org/gnome/desktop/background/picture-uri"
+      value: "'file:///usr/share/backgrounds/ansible-wallpaper.png'"
+
+  - name: set wallpaper position
+    dconf:
+      key: "/org/gnome/desktop/background/picture-uri"
+      value: "'zoom'
+
         
