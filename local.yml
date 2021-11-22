@@ -38,7 +38,7 @@
   - name: copy .zshrc file
     copy:
       src: files/zshrc
-      dest: /home/colin/.zshrc
-      owner: colin
-      group: colin
+      dest: /home/greent/.zshrc
+      owner: greent
+      group: greent
       
