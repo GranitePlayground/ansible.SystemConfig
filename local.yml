@@ -45,14 +45,14 @@
   - name: copy .vimrc
     copy:
       src: files/dotConfig/vimrc
-      dest: /home/greent/.vimrc
+      dest: /home/pi/.vimrc
       owner: greent
       group: greent      
 
   - name: copy .tmux.conf
     copy:
       src: files/dotConfig/tmux.conf
-      dest: /home/greent/.tmux.conf
+      dest: /home/pi/.tmux.conf
       owner: greent
       group: greent
         
