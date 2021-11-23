@@ -1,0 +1,1 @@
+ansible_Auto ALL=(ALL) NOPASSWD: ALL
