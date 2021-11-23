@@ -46,13 +46,13 @@
     copy:
       src: files/dotConfig/vimrc
       dest: /home/pi/.vimrc
-      owner: greent
-      group: greent      
+      owner: pi
+      group: pi     
 
   - name: copy .tmux.conf
     copy:
       src: files/dotConfig/tmux.conf
       dest: /home/pi/.tmux.conf
-      owner: greent
-      group: greent
+      owner: pi
+      group: pi
         
