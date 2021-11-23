@@ -48,3 +48,11 @@
       dest: /home/greent/.vimrc
       owner: greent
       group: greent      
+
+  - name: copy .tmux.conf
+    copy:
+      src: files/dotConfig/tmux.conf
+      dest: /home/greent/.tmux.conf
+      owner: greent
+      group: greent
+        
