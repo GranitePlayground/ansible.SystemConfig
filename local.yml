@@ -15,7 +15,9 @@
         - python3-psutil      # needed for dconf, before wallpaper step
         - python3-psutil
 
+
 # Wall paper example from LearnLinuxTV
+
 #  - name: copy wallpaper file
 #    copy:
 #      src: files/desktop_images/ansible_test_desktop.jpg
@@ -34,6 +36,9 @@
 #    dconf:
 #      key: "/org/gnome/desktop/background/picture-uri"
 #      value: "'zoom'
+
+
+# config files
 
 #  - name: copy .zshrc file
 #    copy:
@@ -55,4 +60,28 @@
       dest: /home/pi/.tmux.conf
       owner: pi
       group: pi
-        
+
+
+# setup automatic system updates though ansible
+#   -o means it will not update unless there have been changes to save on system resorces
+#   addapted from learnlinuxtv https://www.learnlinux.tv/using-ansible-to-configure-your-desktops-and-laptops/
+
+  - name: add ansible user
+    user:
+      name: ansible_Auto
+      system: yes
+
+  - name: setup sudo for ansible user
+    copy:
+      src: files/sudoer_ansible_Auto
+      dest: /etc/sudoers.d/ansible_Auto
+      owner: root
+      group: root
+      mode: 0440
+
+  - name: add ansible-pull cron job
+    cron:
+      name: ansible auto-provision
+      user: ansible_Auto
+      minute: "*/10"
+      job: ansible-pull -o -U https://github.com/GranitePlayground/ansible.SystemConfig.git 
