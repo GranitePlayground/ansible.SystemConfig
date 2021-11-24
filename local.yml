@@ -12,8 +12,17 @@
         - vim
         - zsh
 #       - pygmentize          # color output for 'cat' (Mac only?)
+#       - powerlevel10k       # mac install with brew
         - python3-psutil      # needed for dconf, before wallpaper step
         - python3-psutil
+
+# Mac Homebrew install
+# Nerd fonts
+#  $ brew tap homebrew/cask-fonts
+#  $ brew install --cask font-hack-nerd-font
+# PowerLevel10K
+#    
+#
 
 
 # Wall paper example from LearnLinuxTV
@@ -62,7 +71,8 @@
       group: pi
 
 
-# setup automatic system updates though ansible
+# Setup automatic system updates though an ansible managed cron job.
+
 #   -o means it will not update unless there have been changes to save on system resorces
 #   addapted from learnlinuxtv https://www.learnlinux.tv/using-ansible-to-configure-your-desktops-and-laptops/
 
