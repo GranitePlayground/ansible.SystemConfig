@@ -3,6 +3,16 @@
   connection: local
   become: true
 
+# this should run apt update
+  pre_tasks:
+    - name: update repositories
+      apt:
+        update_cache: yes
+      changed_when: False
+
+#  tasks:
+#    - include: tasks/packages.yml
+
   tasks:
   - name: install packages
     package:
@@ -14,7 +24,6 @@
 #       - pygmentize          # color output for 'cat' (Mac only?)
 #       - powerlevel10k       # mac install with brew
         - python3-psutil      # needed for dconf, before wallpaper step
-        - python3-psutil
 
 # Mac Homebrew install
 # Nerd fonts
