@@ -1,0 +1,24 @@
+---
+- name: Install Packages
+  apt:
+    name:
+      - htop
+      - tmux
+      - vim
+      - zsh
+#     - pygmentize          # color output for 'cat' (Mac only?)
+#     - powerlevel10k       # mac install with brew
+      - python3-psutil      # needed for dconf, before wallpaper step
+      # fun ones.
+      - lolcat
+      - cowsay
+
+
+# Mac Homebrew install
+# Nerd fonts
+#  $ brew tap homebrew/cask-fonts
+#  $ brew install --cask font-hack-nerd-font
+# PowerLevel10K
+#  with brew
+
+
