@@ -13,4 +13,5 @@
   tasks:
     - include: tasks/packages.yml
 
-
+  copy:
+    - include: tasks/dotConfig.yml

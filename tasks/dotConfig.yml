@@ -1,0 +1,24 @@
+---
+#  - name: copy .zshrc file
+#    copy:
+#      src: files/dotConfig/zshrc
+#      dest: /home/greent/.zshrc
+#      owner: greent
+#      group: greent
+
+
+  - name: copy .vimrc
+    copy:
+      src: files/dotConfig/vimrc
+      dest: /home/pi/.vimrc
+      owner: pi
+      group: pi     
+
+  - name: copy .tmux.conf
+    copy:
+      src: files/dotConfig/tmux.conf
+      dest: /home/pi/.tmux.conf
+      owner: pi
+      group: pi
+
+
