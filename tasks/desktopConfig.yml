@@ -4,8 +4,8 @@
    copy:
      src: files/desktop_images/ansible_test_desktop.jpg
      dest: /usr/share/backgrounds/ansible_test_desktop.jpg
-     owner: root
-     group: root
+     owner: ubuntu
+     group: ubuntu
 
  - name: set wallpaper
    become_user: ubuntu
