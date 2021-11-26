@@ -5,7 +5,7 @@
 #   addapted from learnlinuxtv https://www.learnlinux.tv/using-ansible-to-configure-your-desktops-and-laptops/
 
   - name: add ansible user
-   user:
+    user:
       name: ansible_Auto
       system: yes
 
