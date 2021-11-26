@@ -14,7 +14,7 @@
     - include: tasks/users.yml
     - include: tasks/packages.yml
     - include: tasks/cron_Auto.yml
-    - include: tasks/desktopConfig.yml
+#    - include: tasks/desktopConfig.yml
 
 #  copy:
 #    - include: tasks/dotConfig.yml
