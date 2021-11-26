@@ -1,2 +1,1 @@
-# this file allows the ansible_Auto user to use sudo funtions
 ansible ALL=(ALL) NOPASSWD: ALL
