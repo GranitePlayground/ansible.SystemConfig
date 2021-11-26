@@ -1,0 +1,14 @@
+---
+# Setup automatic system updates though an ansible managed cron job.
+
+#   -o means it will not update unless there have been changes to save on system resorces
+#   addapted from learnlinuxtv https://www.learnlinux.tv/using-ansible-to-configure-your-desktops-and-laptops/
+
+
+  - name: add cron job (ansible-pull)
+    cron:
+      name: "ansible auto-provision"
+      user: ansible_Auto
+      minute: "*/10"
+      job: "/usr/bin/ansible-pull -o -U https://github.com/jlacroix82/ansible_pull_tutorial.git > /dev/null"
+

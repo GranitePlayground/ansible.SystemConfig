@@ -1,3 +1,4 @@
 ---
 # this file allows the ansible_Auto user to use sudo funtions
+# line destination  /etc/sudoers.d/ansible_Auto
 ansible ALL=(ALL) NOPASSWD: ALL

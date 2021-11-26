@@ -11,7 +11,11 @@
       changed_when: False
 
   tasks:
+    - include: tasks/users.yml
     - include: tasks/packages.yml
+    - include: tasks/cron_Auto
 
-  copy:
-    - include: tasks/dotConfig.yml
+
+#  copy:
+#    - include: tasks/dotConfig.yml
+
