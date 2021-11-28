@@ -11,7 +11,7 @@
 #     - pygmentize          # color output for 'cat' (Mac only?)
 #     - powerlevel10k       # mac install with brew
       - python3-psutil      # needed for dconf, before wallpaper step
-      - caffeine
+#      - caffeine
       # fun ones.
       - lolcat
       - cowsay
