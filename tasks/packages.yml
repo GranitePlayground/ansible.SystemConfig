@@ -6,6 +6,7 @@
       - tmux
       - vim
       - zsh
+      - powerlevel10k
       - nmap
       - lynis
 #     - pygmentize          # color output for 'cat' (Mac only?)

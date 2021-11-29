@@ -1,10 +1,10 @@
 ---
-#  - name: copy .zshrc file
-#    copy:
-#      src: files/dotConfig/zshrc
-#      dest: /home/greent/.zshrc
-#      owner: greent
-#      group: greent
+  - name: copy .zshrc file
+    copy:
+      src: files/dotConfig/zshrc
+      dest: /home/greent/.zshrc
+      owner: colin
+      group: colin
 
 
   - name: copy .vimrc
