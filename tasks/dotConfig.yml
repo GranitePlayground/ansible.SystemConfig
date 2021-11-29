@@ -10,14 +10,14 @@
   - name: copy .vimrc
     copy:
       src: files/dotConfig/vimrc
-      dest: /home/pi/.vimrc
+      dest: /home/colin/.vimrc
       owner: colin
       group: colin     
 
   - name: copy .tmux.conf
     copy:
       src: files/dotConfig/tmux.conf
-      dest: /home/pi/.tmux.conf
+      dest: /home/colin/.tmux.conf
       owner: colin
       group: colin
 
