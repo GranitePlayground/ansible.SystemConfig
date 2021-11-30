@@ -12,3 +12,10 @@
       minute: "*/10"
       job: "/usr/bin/ansible-pull -o -U https://github.com/jlacroix82/ansible_pull_tutorial.git > /dev/null"
 
+# - - - - - - - not finished - - - - - - - - - -
+#  - name: .myConfig_repo (ansible-pull)
+#    cron:
+#      name: ".myConfig_repo auto-provistion"
+#      user: ansible_Auto
+#      minute: "*/10"
+#      job: 
