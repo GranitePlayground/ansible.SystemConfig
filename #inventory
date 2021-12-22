@@ -1,0 +1,19 @@
+#servers to be managed can be placed here by IP Address or working DNS name
+
+[Workstations]
+#Bernard_oldAir
+#Laverne
+#myPi    # Does not exist yet for pi48
+
+[Servers]
+#netPi
+
+[Testing]
+ansibleTesting1
+ansibleTesting2
+rPiDesktop
+
+
+[MacOSX]
+
+[Linux]
