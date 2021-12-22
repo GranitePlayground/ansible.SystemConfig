@@ -12,14 +12,14 @@
       changed_when: False
       when: ansible_distribution in["Ubuntu", "Debian", "Pop!_OS"]
 
-   - name: update (MacOSX)
-     tags: always
-     become: false
-     community.general.homebrew:
-       update_homebrew: yes
-       upgrade_all: yes
-     changed_when: False
-     hen: ansible_distribution == "MacOSX"
+    - name: update (MacOSX)
+      tags: always
+      become: false
+      community.general.homebrew:
+        update_homebrew: yes
+        upgrade_all: yes
+      changed_when: False
+      hen: ansible_distribution == "MacOSX"
 
     
   tasks:
