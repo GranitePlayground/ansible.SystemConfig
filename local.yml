@@ -6,6 +6,7 @@
 # this should run apt update
   pre_tasks:
     - name: update repositories
+      tags: always
       apt:
         upgrade: dist
         update_cache: yes
@@ -19,7 +20,7 @@
         update_homebrew: yes
         upgrade_all: yes
       changed_when: False
-      hen: ansible_distribution == "MacOSX"
+      when: ansible_distribution == "MacOSX"
 
     
   tasks:
