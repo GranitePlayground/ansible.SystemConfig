@@ -16,7 +16,17 @@
       # fun ones.
       - lolcat
       - cowsay
+#     - docker.io
 
+- name: Install Packages (netPi)
+  apt:
+    name:
+      - htop
+      - docker.io
+      - 
+    when: netPi
+
+#syncthing
 
 # Mac Homebrew install
 # Nerd fonts
