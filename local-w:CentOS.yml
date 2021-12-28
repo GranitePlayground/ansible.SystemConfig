@@ -1,0 +1,25 @@
+- hosts: all
+  become: true
+  pre_tasks:
+
+  - name: update (CentOS)
+    tags: always
+    dnf:
+      update_only: yes
+      update_cache: yes
+    when: ansible_distribution == "CentOS"
+
+  - name: update (Debian based systems)
+    tags: always
+    apt:
+      upgrade: dist
+      update_cache: yes
+    when: ansible_distribution in["Ubuntu", "Debian", "Pop!_OS"]
+
+  - name: update (MacOSX)
+    tags: always
+    become: false
+    community.general.homebrew:
+      update_homebrew: yes
+      upgrade_all: yes
+    when: ansible_distribution == "MacOSX"
