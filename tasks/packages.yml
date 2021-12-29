@@ -5,18 +5,15 @@
       - htop
       - tmux
       - vim
-      - zsh
-      - powerlevel10k
+#      - zsh
+#      - powerlevel10k     # redundent used below in (WorkStations)
       - nmap
       - lynis
 #     - pygmentize          # color output for 'cat' (Mac only?)
 #     - powerlevel10k       # mac install with brew
       - python3-psutil      # needed for dconf, before wallpaper step
       - caffeine
-      # fun ones.
-      - lolcat
-      - cowsay
-#     - docker.io
+#      - docker.io
 
 - name: Install Packages (netPi)
   apt:
@@ -25,6 +22,20 @@
       - docker.io
       - 
     when: netPi
+
+- name: Install Packages (Workstations)
+  apt:
+    name:
+      # enviroment
+      - powerlevel10k
+      - zsh
+      # tools
+      - neofetch
+      # fun ones.
+      - lolcat
+      - cowsay
+    when: Workstations
+
 
 #syncthing
 
