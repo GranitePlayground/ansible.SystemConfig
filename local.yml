@@ -5,7 +5,7 @@
 
 # this should run apt update
   pre_tasks:
-    - name: update repositories
+    - name: update (Debian Based Systems)
       tags: always
       apt:
         upgrade: dist

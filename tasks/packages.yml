@@ -1,40 +1,63 @@
 ---
-- name: Install Packages
+- name: Linux Packages (all system types)
   apt:
     name:
       - htop
       - tmux
       - vim
-#      - zsh
-#      - powerlevel10k     # redundent used below in (WorkStations)
-      - nmap
       - lynis
-#     - pygmentize          # color output for 'cat' (Mac only?)
-#     - powerlevel10k       # mac install with brew
-      - python3-psutil      # needed for dconf, before wallpaper step
-      - caffeine
-#      - docker.io
-
-- name: Install Packages (netPi)
-  apt:
-    name:
-      - htop
-      - docker.io
-      - 
-    when: netPi
+#     - docker.io
 
 - name: Install Packages (Workstations)
   apt:
     name:
       # enviroment
-      - powerlevel10k
       - zsh
+      - powerlevel10k
+      - python3-psutil      # needed for dconf, before wallpaper step
       # tools
+      - nmap
+      - git
+      - ansible
       - neofetch
+      - caffeine
       # fun ones.
       - lolcat
       - cowsay
     when: Workstations
+
+
+- hosts: MacOSX
+  tasks:
+  - name: install Mac packages w/ homebrew
+    package:
+      name:
+        # enviroment
+        - zsh
+        - powerlevel10k
+        - python3-psutil      # needed for dconf, before wallpaper step
+        # tools
+        - tmux
+        - vim
+        - lynis
+        - htop
+        - nmap
+        - syncthing
+        - pygmentize          # color output for 'cat' (Mac only?)
+        # fun ones
+        - lolcat
+        - cowsay
+      state: present
+      update_homebrew: yes
+      upgrade_all: yes
+#    when: ansible_distribution == "MacOSX"
+
+
+#- name: Install Packages (netPi)
+#  apt:
+#    name:
+#      - docker.io
+#    when: netPi
 
 
 #syncthing
@@ -43,7 +66,5 @@
 # Nerd fonts
 #  $ brew tap homebrew/cask-fonts
 #  $ brew install --cask font-hack-nerd-font
-# PowerLevel10K
-#  with brew
 
 

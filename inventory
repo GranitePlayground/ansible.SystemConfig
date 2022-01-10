@@ -1,7 +1,7 @@
 #servers to be managed can be placed here by IP Address or working DNS name
 
 [Workstations]
-#Bernard_oldAir
+Bernard_oldAir
 #Laverne
 rPiDesktop # vertual machine
 #myPi    # Does not exist yet for pi48
