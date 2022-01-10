@@ -7,7 +7,7 @@ rPiDesktop # vertual machine
 #myPi    # Does not exist yet for pi48
 
 [Servers]
-netPi
+#netPi
 
 [Testing]
 ansibleTesting1
