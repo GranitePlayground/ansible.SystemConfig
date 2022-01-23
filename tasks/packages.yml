@@ -19,6 +19,8 @@
       - nmap
       - git
       - ansible
+      - syncthing
+      - gparted
       - neofetch
       - caffeine
       # fun ones.

@@ -25,7 +25,7 @@
     
   tasks:
 ###    - include: tasks/users.yml
-#    - include: tasks/packages.yml
+    - include: tasks/packages.yml
 #    - include: tasks/dotConfig.yml
 ###    - include: tasks/cron_Auto.yml
 ###    - include: tasks/desketopConf.yml	# work from around 50:00 learnlinuxtv 'using ansible to automate your laptop and desktop configs!'
